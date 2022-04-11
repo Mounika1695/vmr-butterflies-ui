@@ -1,1 +1,12 @@
-<p>Start editing to see some magic happen :)</p>
+<nav mat-tab-nav-bar>
+  <a
+    mat-tab-link
+    *ngFor="let link of navLinks"
+    [routerLink]="link.link"
+    routerLinkActive
+    #rla="routerLinkActive"
+    [active]="rla.isActive"
+  >
+  </a>
+</nav>
+<router-outlet></router-outlet>
